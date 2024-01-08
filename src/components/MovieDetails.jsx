@@ -58,8 +58,6 @@ const MovieDetails = () => {
             console.error('Error adding rating:', error.message);
         }
     };
-
-
     return (
         <div className="container">
             <Sidebar />
@@ -71,6 +69,14 @@ const MovieDetails = () => {
                         </Col>
                         <Col md={8}>
                             <h2>{movie.title}</h2>
+                            <h5>{movie.type === 'M' ? 'Film' : 'Serial'}</h5>
+                            {movie.type === 'S' && <p>{`Ilość sezonów: ${movie.seasons}`}</p>}
+                            <p>{`Reżyser: ${movie.director}`}</p>
+                            <p>{`Rok premiery: ${movie.releaseYear}`}</p>
+                            <p>{`Czas trwania: ${movie.duration}`}</p>
+                            <p>{`Aktorzy: ${movie.actors.map(actor => `${actor.name} ${actor.surname}`).join(", ")}`}</p>
+                            <p>{`Gatunki: ${movie.genres.map(genre => genre.genre).join(", ")}`}</p>
+                            <p>{`Opis: ${movie.description}`}</p>
                             <Button onClick={addToWatchlist}>Dodaj do watchlisty</Button>
                             <div className="rating-section">
                                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (

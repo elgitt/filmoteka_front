@@ -9,6 +9,7 @@ import MovieDetails from './components/MovieDetails';
 import UserRatings from './components/UserRatings'; 
 import UserWatchlist from './components/UserWatchlist';
 import { AuthProvider } from './components/AuthContext';
+import ProfilePage from './components/ProfilePage';
 
 const Routes = () => {
   return (
@@ -18,12 +19,14 @@ const Routes = () => {
         {/* <CustomNavbar /> */}
         <Switch>
           <Route path="/home" exact component={Home} />
+          <Route path="/" exact component={Home} />
           <Route path="/register" component={RegistrationForm} />
           <Route path="/login" component={LoginForm} />
           <Route path="/movies" exact component={Movies} />
           <Route path="/movies/:id" component={MovieDetails} />
           <Route path="/ratings" component={UserRatings} /> 
-            <Route path="/watchlist" component={UserWatchlist} /> 
+          <Route path="/watchlist" component={UserWatchlist} /> 
+          <Route path="/profile" component={ProfilePage} />
       
         </Switch>
       </div>

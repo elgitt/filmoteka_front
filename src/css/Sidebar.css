@@ -1,8 +1,80 @@
-.sidebar {
+.w3-sidebar {
+  background-color: #151515;
+  height: 100vh;
   position: fixed;
+  width: 250px;
+  top: 0;
   left: 0;
-  width: 10; /* Dostosuj szerokość do swoich potrzeb */
-  height: 100%;
-  background-color: #f8f9fa; /* Dodaj odpowiedni kolor tła */
-  overflow-y: auto; /* Dopuszczalne przewijanie w pionie, jeśli zawartość przekracza wysokość */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.w3-sidebar .logo {
+  margin-top: 20px;
+}
+
+.w3-sidebar .FILMO-TEKA {
+  -webkit-text-stroke: 1px #151515;
+  color: #ac74e4;
+  font-family: "Michroma-Regular", Helvetica;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
+
+.w3-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0; 
+  display: flex;
+  flex-direction: column;
+  margin-bottom:auto;
+ 
+}
+
+.w3-sidebar .nav-item {
+  margin-bottom: 10px;
+}
+
+.w3-sidebar a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Lato-SemiBold", Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.w3-sidebar .nav-item:hover a {
+  color: #ac74e4;
+}
+
+.text-center {
+ 
+  display: flex;
+  align-items: center;
+ 
+}
+
+.text-center img {
+
+  margin-right: 10px; 
+  margin-bottom: 30px;
+  
+}
+
+.text-center p {
+ 
+
+  color: #ac74e4;
+  font-family: "Lato-SemiBold", Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0; 
+  margin-bottom: 30px;
 }

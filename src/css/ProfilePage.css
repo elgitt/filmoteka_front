@@ -1,0 +1,10 @@
+.container.fluid {
+    display: flex;
+  }
+  
+  .col-md-10 {
+    flex: 1;
+    padding: 20px; /* Dodatkowy padding dla estetyki */
+    margin-left: 200px;
+  }
+  
