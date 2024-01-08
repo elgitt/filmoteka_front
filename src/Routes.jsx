@@ -4,22 +4,27 @@ import CustomNavbar from './components/Navbar';
 import RegistrationForm from './components/RegistrationForm';
 import LoginForm from './components/LoginForm';
 import Home from './components/Home';
-import movies from './components/Movies';
-import Series from './components/Series';
-import { AuthProvider } from './components/AuthContext'
+import Movies from './components/Movies';
+import MovieDetails from './components/MovieDetails';
+import UserRatings from './components/UserRatings'; 
+import UserWatchlist from './components/UserWatchlist';
+import { AuthProvider } from './components/AuthContext';
 
 const Routes = () => {
   return (
     <Router>
        <AuthProvider>
       <div>
-        <CustomNavbar />
+        {/* <CustomNavbar /> */}
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/home" exact component={Home} />
           <Route path="/register" component={RegistrationForm} />
           <Route path="/login" component={LoginForm} />
-          <Route path="/movies" component={movies} />
-          <Route path="/series" component={Series} />
+          <Route path="/movies" exact component={Movies} />
+          <Route path="/movies/:id" component={MovieDetails} />
+          <Route path="/ratings" component={UserRatings} /> 
+            <Route path="/watchlist" component={UserWatchlist} /> 
+      
         </Switch>
       </div>
       </AuthProvider>

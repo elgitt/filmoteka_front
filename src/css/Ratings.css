@@ -1,0 +1,22 @@
+  .table {
+    margin-left: 170px; 
+  }
+  
+  .table th {
+    text-align: center;
+  }
+
+  .table td {
+    text-align: center;
+  }
+  
+  .table tbody tr {
+    margin-bottom: 10px;
+  }
+  
+
+.smaller-poster {
+    width: 80px; /* Możesz dostosować szerokość */
+    height: auto; /* Utrzymaj proporcje obrazu */
+  }
+  

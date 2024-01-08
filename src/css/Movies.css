@@ -1,0 +1,15 @@
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-left: 200px;
+  }
+  
+  .movie-item {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    
+  }
+ 
+ 

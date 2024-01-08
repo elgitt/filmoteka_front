@@ -5,6 +5,7 @@ import { useAuth } from './AuthContext';
 
 
 const LoginForm = () => {
+
   const { login } = useAuth();
 
   const [credentials, setCredentials] = useState({
@@ -42,6 +43,10 @@ const LoginForm = () => {
 
       if (response.ok) {
         const user = await response.json();
+        console.log('Dane użytkownika po zalogowaniu:', user);
+        console.log('Imię użytkownika:', user.name);
+  console.log('Nazwisko użytkownika:', user.surname);
+  console.log('ID użytkownika:', user.id);
         login(user); // Zapisz użytkownika w kontekście autoryzacji
         history.push('/movies');
       } else {

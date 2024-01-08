@@ -1,0 +1,15 @@
+  .rating-section {
+    margin-top: 10px; /* Dodaj odstęp między sekcją ocen a przyciskiem */
+  }
+  
+  .movie-details-content {
+    margin-left: 200px; /* Przesunięcie w prawo zgodnie z szerokością Sidebar */
+    padding: 20px;
+  }
+  
+  .img-fluid movie-poster {
+    max-width: 100%;
+    height: auto;
+  }
+
+  

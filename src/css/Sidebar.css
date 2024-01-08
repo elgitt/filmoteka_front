@@ -1,0 +1,8 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  width: 10; /* Dostosuj szerokość do swoich potrzeb */
+  height: 100%;
+  background-color: #f8f9fa; /* Dodaj odpowiedni kolor tła */
+  overflow-y: auto; /* Dopuszczalne przewijanie w pionie, jeśli zawartość przekracza wysokość */
+}

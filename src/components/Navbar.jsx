@@ -12,6 +12,8 @@ const CustomNavbar = ({ user }) => {
           <Nav className="me-auto">
           <Nav.Link as={Link} to="/movies">Filmy</Nav.Link>
           <Nav.Link as={Link} to="/series">Seriale</Nav.Link>
+          <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+  
             {/* {user && (
               <>
                 <Nav.Link href="/movies">Filmy</Nav.Link>

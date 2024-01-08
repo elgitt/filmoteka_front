@@ -26,7 +26,7 @@ const RegistrationForm = () => {
     try {
     console.log('Sending data:', user);
       const response = await fetch('http://localhost:8080/register/save', {
-        method: 'GET',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
