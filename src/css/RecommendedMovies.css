@@ -1,0 +1,28 @@
+.recommended-item {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .movie-details-container {
+    display: flex;
+    justify-content: space-between; /* Wyrównaj do lewej krawędzi i prawej krawędzi kontenera */
+    align-items: flex-start; /* Wyrównaj do górnej krawędzi plakatu */
+    margin-right: 20px; /* Dodatkowy margines między szczegółami a opisem */
+    margin-top: 30px  ;
+  }
+  
+  .movie-poster {
+    
+    margin-left:300px;
+    width: 210px; /* Dostosuj szerokość plakatu według własnych preferencji */
+  }
+  
+  .movie-details {
+    margin-left: 20px; /* Dodatkowy margines między plakatem a szczegółami filmu */
+    flex-grow: 1; /* Elastyczność dla zachowania odstępu od prawej krawędzi kontenera */
+    color:aliceblue;
+    text-align: left;
+}
+  
+  

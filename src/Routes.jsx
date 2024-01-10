@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import CustomNavbar from './components/Navbar';
 import RegistrationForm from './components/RegistrationForm';
 import LoginForm from './components/LoginForm';
 import Home from './components/Home';
@@ -10,6 +9,7 @@ import UserRatings from './components/UserRatings';
 import UserWatchlist from './components/UserWatchlist';
 import { AuthProvider } from './components/AuthContext';
 import ProfilePage from './components/ProfilePage';
+import Recommended from "./components/Recommended";
 
 const Routes = () => {
   return (
@@ -27,6 +27,8 @@ const Routes = () => {
           <Route path="/ratings" component={UserRatings} /> 
           <Route path="/watchlist" component={UserWatchlist} /> 
           <Route path="/profile" component={ProfilePage} />
+          <Route path="/recommended" component={Recommended} />
+
       
         </Switch>
       </div>

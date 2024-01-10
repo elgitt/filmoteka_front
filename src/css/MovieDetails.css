@@ -1,15 +1,37 @@
-  .rating-section {
-    margin-top: 10px; /* Dodaj odstęp między sekcją ocen a przyciskiem */
-  }
-  
-  .movie-details-content {
-    margin-left: 200px; /* Przesunięcie w prawo zgodnie z szerokością Sidebar */
-    padding: 20px;
-  }
-  
-  .img-fluid movie-poster {
-    max-width: 100%;
-    height: auto;
-  }
+/* Update your existing CSS file */
 
-  
+.movie-details-content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.img-fluid.movie-poster {
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.rating-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.rating-section span {
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.rating-section span:last-child {
+  margin-right: 15px;
+}
+
+.rating-section button {
+  font-size: 16px;
+  background-color: #ac74e4; /* Set the button color to your fioletowy */
+  color: #151515; /* Set the text color to contrast with the background */
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}

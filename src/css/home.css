@@ -1,4 +1,48 @@
-.App{
-    background-color: black; /* Ustaw tło na czarne */
-    color: white; /* Ustaw kolor tekstu na biały */
-  }
+body {
+  background-color: #151515;
+  color: #ac74e4;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato-SemiBold", Helvetica;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.btn-secondary {
+  background-color: #151515;
+  color: #ac74e4;
+  border: 1px solid #ac74e4;
+  margin: 0 10px;
+  margin-bottom: 20px;
+}
+
+.btn-secondary:hover {
+  background-color: #ac74e4;
+  color: #151515;
+}
+
+.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-center h1, .text-center h2 {
+  color: #ac74e4;
+}
+
+.text-center p {
+  color: #ac74e4;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 30px;
+}

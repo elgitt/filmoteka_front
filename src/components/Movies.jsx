@@ -47,7 +47,7 @@ const Movies = () => {
           <Sidebar />
           <div className="searchbar">
             <SearchField
-              placeholder="Search movies..."
+              placeholder="Szukaj"
               onChange={handleSearch}
               searchText={searchTerm}
               classNames="search-field"
