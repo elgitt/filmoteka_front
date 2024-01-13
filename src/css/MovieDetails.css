@@ -1,37 +1,75 @@
-/* Update your existing CSS file */
-
 .movie-details-content {
-  margin-left: 250px;
-  padding: 20px;
+  flex-grow: 1;
+  margin: 20px;
+  color: #fff;
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
 }
 
-.img-fluid.movie-poster {
+.movie-poster {
   max-width: 100%;
   height: auto;
-  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.movie-details {
+  color: #fff;
+}
+
+.movie-details h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.movie-details h5 {
+  margin-bottom: 10px;
+}
+
+.movie-details p {
+  margin-bottom: 5px;
+}
+
+.button {
+  background-color: #ac74e4 !important;
+  border: 1px solid #ac74e4 !important;
+  padding: 10px 30px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #151515;
 }
 
 .rating-section {
-  margin-top: 20px;
   display: flex;
   align-items: center;
+  margin-top: 10px;
 }
 
 .rating-section span {
   cursor: pointer;
-  font-size: 24px;
+  font-size: 20px;
   margin-right: 5px;
 }
 
-.rating-section span:last-child {
-  margin-right: 15px;
+.rating-section span:hover,
+.rating-section span:active {
+  color: #ac74e4;
 }
 
-.rating-section button {
-  font-size: 16px;
-  background-color: #ac74e4; /* Set the button color to your fioletowy */
-  color: #151515; /* Set the text color to contrast with the background */
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
+@media (min-width: 768px) {
+  .movie-details-content {
+    flex-direction: row;
+  }
+
+  .movie-details-content .col-md-4 {
+    flex: 100px;
+    margin-right: 20px;
+  }
+
+  .movie-details-content .col-md-8 {
+    flex: 140px;
+  }
 }

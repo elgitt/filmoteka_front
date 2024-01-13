@@ -1,10 +1,99 @@
-.container.fluid {
-    display: flex;
-  }
-  
-  .col-md-10 {
-    flex: 1;
-    padding: 20px; /* Dodatkowy padding dla estetyki */
-    margin-left: 200px;
-  }
-  
+.container-fluid {
+  display: flex;
+  margin-top: 150px;
+}
+
+.col-md-10 {
+  padding: 20px;
+  background-color: #151515;
+  flex-grow: 1;
+  max-width: 70%;
+  position: relative; 
+}
+
+.container-fluid,
+.col-md-10,
+.top-genres {
+  color: #ac74e4;
+}
+
+.col-md-10 h2,
+.top-genres h2 {
+  color: #ac74e4;
+  margin-bottom: 20px;
+}
+
+.col-md-10 span,
+.top-genres span {
+  display: block;
+  margin: 10px 0;
+}
+
+.col-md-10 ul,
+.top-genres ul {
+  list-style: none;
+  padding: 0;
+}
+
+.col-md-10 li,
+.top-genres li {
+  margin-bottom: 10px;
+}
+
+.col-md-2 {
+  padding: 20px;
+  background-color: #151515;
+}
+
+.col-md-10 button {
+  background-color: #ac74e4;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.col-md-10 button:hover {
+  background-color: #8e5bb1;
+}
+
+
+.edit-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: #151515;
+  background-color: #ac74e4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 300px; 
+}
+
+.edit-form label {
+  display: block;
+  margin: 10px 0;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.edit-form button {
+  background-color: #151515;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.edit-form button:hover {
+  background-color: #8e5bb1;
+}

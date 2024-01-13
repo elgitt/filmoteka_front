@@ -1,48 +1,53 @@
 body {
-  background-color: #151515;
+  background-color: #151515 !important;
   color: #ac74e4;
   margin: 0;
   padding: 0;
   font-family: "Lato-SemiBold", Helvetica;
+  
 }
 
-.container {
+.home {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.row {
-  margin-top: 20px;
+.div {
+  text-align: center;
 }
 
-.btn-secondary {
-  background-color: #151515;
+.FILMO-TEKA {
+  -webkit-text-stroke: 1px #151515;
   color: #ac74e4;
-  border: 1px solid #ac74e4;
-  margin: 0 10px;
-  margin-bottom: 20px;
+  font-family: "Michroma-Regular", Helvetica;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 10px;
 }
 
-.btn-secondary:hover {
-  background-color: #ac74e4;
-  color: #151515;
-}
-
-.text-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.text-center h1, .text-center h2 {
-  color: #ac74e4;
-}
-
-.text-center p {
+.text-wrapper {
   color: #ac74e4;
   font-size: 18px;
   font-weight: 600;
-  margin: 0;
-  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.button-wrapper {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #ac74e4 !important;
+
+  border: 1px solid #ac74e4 !important;
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+
+.btn:hover {
+  background-color: #151515;
+  color: #ac74e4;
 }

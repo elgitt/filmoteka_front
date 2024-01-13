@@ -49,12 +49,12 @@ const RegistrationForm = () => {
   };
 
   return (
-    <Form className="container mt-3" onSubmit={handleSubmit}>
+    <Form className="container mt-3 custom-form" onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="name">
-        <Form.Label>Name</Form.Label>
+        <Form.Label>Imię</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Enter first name"
+          placeholder="Wpisz imię"
           name="name"
           value={user.name}
           onChange={handleInputChange}
@@ -62,10 +62,10 @@ const RegistrationForm = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="surname">
-        <Form.Label>Surname</Form.Label>
+        <Form.Label>Nazwisko</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Enter surname"
+          placeholder="Wpisz nazwisko"
           name="surname"
           value={user.surname}
           onChange={handleInputChange}
@@ -73,10 +73,10 @@ const RegistrationForm = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="username">
-        <Form.Label>Username</Form.Label>
+        <Form.Label>Nazwa użytkownika</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Enter username"
+          placeholder="Wpisz nazwę użytkownika"
           name="username"
           value={user.username}
           onChange={handleInputChange}
@@ -84,10 +84,10 @@ const RegistrationForm = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="password">
-        <Form.Label>Password</Form.Label>
+        <Form.Label>Hasło</Form.Label>
         <Form.Control
           type="password"
-          placeholder="Enter password"
+          placeholder="Wpisz hasło"
           name="password"
           value={user.password}
           onChange={handleInputChange}
@@ -95,10 +95,10 @@ const RegistrationForm = () => {
       </Form.Group>
 
       <Button variant="primary" type="submit">
-        Register
+        Zarejestruj
       </Button>
 
-      <span className="mt-2 d-block">Already registered? <a href="/login">Login here</a></span>
+      <span className="mt-2 d-block">Masz już konto? <a href="/login">Zaloguj się!</a></span>
 
       {successMessage && (
         <div className="alert alert-success mt-3">{successMessage}</div>

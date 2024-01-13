@@ -10,6 +10,7 @@ import UserWatchlist from './components/UserWatchlist';
 import { AuthProvider } from './components/AuthContext';
 import ProfilePage from './components/ProfilePage';
 import Recommended from "./components/Recommended";
+import AdminPanel from './components/AdminPanel';
 
 const Routes = () => {
   return (
@@ -28,6 +29,7 @@ const Routes = () => {
           <Route path="/watchlist" component={UserWatchlist} /> 
           <Route path="/profile" component={ProfilePage} />
           <Route path="/recommended" component={Recommended} />
+          <Route path="/admin" component={AdminPanel} />
 
       
         </Switch>

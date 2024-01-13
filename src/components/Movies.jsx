@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
-import SearchField from 'react-search-field';
 import '../css/Movies.css';
 
 const Movies = () => {
@@ -28,31 +27,32 @@ const Movies = () => {
         }
     };
 
-    const handleSearch = (value) => {
-        setSearchTerm(value);
+    const handleSearch = (event) => {
+      const value = event.target.value;
+      if (typeof value === 'string') {
+        setSearchTerm(value.toLowerCase());
+      }
     };
-
+  
     const filteredMovies = movies.filter((movie) => {
-        // Implement your search logic here based on movie properties
-        return (
-            movie.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            movie.director.toLowerCase().includes(searchTerm.toLowerCase()) 
-          // Add more conditions for other movie properties
-          // ...
-        );
+      return (
+        typeof searchTerm === 'string' &&
+        (movie.title.toLowerCase().includes(searchTerm))
+      );
     });
-
+  
     return (
         <div className="movies-container">
           <Sidebar />
           <div className="searchbar">
-            <SearchField
-              placeholder="Szukaj"
-              onChange={handleSearch}
-              searchText={searchTerm}
-              classNames="search-field"
-            />
-          </div>
+        <input
+          type="text"
+          placeholder="Szukaj"
+          value={searchTerm}
+          onChange={handleSearch}
+          className="search-field"
+        />
+      </div>
           <div className="movies-grid">
             {filteredMovies.map((movie) => (
               <div key={movie.id} className="movie-item">

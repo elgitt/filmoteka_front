@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
 import Sidebar from './Sidebar';
 import { Container, Table, Image } from 'react-bootstrap';
-import '../css/Ratings.css';
+
 
 const UserWatchlist = () => {
     const { user } = useAuth();
@@ -26,39 +26,33 @@ const UserWatchlist = () => {
     };
 
     return (
-        <div className="container-fluid">
+        <div className="recommended-movies-container">
             <Sidebar />
-            <div className="row">
-                <div className="col-md-10">
-                    {/* <h2>Do obejrzenia</h2> */}
-                    <Table className="table">
-                        <thead>
-                            <tr>
-                                <th>Poster</th>
-                                <th>Title</th>
-                                <th>Type</th>
-                                <th>Genre</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {userWatchlist.map((movie) => (
-                                <tr key={movie.id}>
-                                    <td>
-                                        <Image
-                                            src={movie.posterLink}
-                                            alt={`Poster ${movie.title}`}
-                                            className="img-fluid smaller-poster" 
-                                        />
-                                    </td>
-                                    <td>{movie.title}</td>
-                                    <td>{movie.type}</td>
-                                    <td>{movie.genres ? movie.genres.map((genre) => genre.genre).join(', ') : 'N/A'}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </Table>
-                </div>
+            <div className="recommended-movies-list">
+                {userWatchlist.map((movie) => (
+                    <div key={movie.id} className="recommended-item">
+                        <div className="movie-details-container">
+                            <Image
+                                src={movie.posterLink}
+                                alt={`Poster ${movie.title}`}
+                                fluid
+                                className="movie-poster"
+                            />
+                            <div className="movie-details">
+                                <h3>{movie.title}</h3>
+                                <p>{`Typ: ${movie.type === 'M' ? 'Film' : 'Serial'}`}</p>
+                                <p>{`Gatunek: ${
+                                    movie.genres ? movie.genres.map((genre) => genre.genre).join(', ') : 'N/A'
+                                }`}</p>
+                                  <p>{`Reżyser: ${movie.director}`}</p>
+                                  <p>{`Czas trwania: ${movie.duration}`}</p>
+                                  <p>{`Premiera: ${movie.releaseYear}`}</p>
+                                  {movie.type === 'S' && <p>{`Ilość sezonów: ${movie.seasons}`}</p>}
+                                  
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );

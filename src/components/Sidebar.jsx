@@ -32,6 +32,11 @@ const Sidebar = () => {
         <li className={`nav-item ${location.pathname === '/profile' ? 'active' : ''}`}>
           <Link to="/profile" className="nav-link">Profil</Link>
         </li>
+        {user && user.id === 10 && (
+          <li className={`nav-item ${location.pathname === '/admin' ? 'active' : ''}`}>
+            <Link to="/admin" className="nav-link">Zarządzaj</Link>
+          </li>
+        )}
         <li className={`nav-item ${location.pathname === '/home' ? 'active' : ''}`}>
           <Link to="/home" className="nav-link">Wyloguj</Link>
         </li>

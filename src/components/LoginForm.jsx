@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { useAuth } from './AuthContext';
+import "../css/Login.css"
 
 
 const LoginForm = () => {
@@ -43,30 +44,26 @@ const LoginForm = () => {
 
       if (response.ok) {
         const user = await response.json();
-        console.log('Dane użytkownika po zalogowaniu:', user);
-        console.log('Imię użytkownika:', user.name);
-  console.log('Nazwisko użytkownika:', user.surname);
-  console.log('ID użytkownika:', user.id);
-        login(user); // Zapisz użytkownika w kontekście autoryzacji
+        login(user); 
         history.push('/movies');
       } else {
         console.error('Invalid Username or Password');
-        setErrorMessage('Invalid Username or Password');
+        setErrorMessage('Błędna nazwa użytkownika lub hasło');
       }
     } catch (error) {
       console.error('Login error:', error);
-      setErrorMessage('Something went wrong. Please try again later.');
+      setErrorMessage('Coś poszło nie tak. Spróbuj później');
     }
   };
 
 
   return (
-    <Form className="container mt-3" onSubmit={handleSubmit}>
+    <Form className="container mt-3 custom-form" onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="username">
-        <Form.Label>Username</Form.Label>
+        <Form.Label>Nazwa użytkownika</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Enter username"
+          placeholder="Wpisz nazwę użytkownika"
           name="username"
           value={credentials.username}
           onChange={handleInputChange}
@@ -74,10 +71,10 @@ const LoginForm = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="password">
-        <Form.Label>Password</Form.Label>
+        <Form.Label>Hasło</Form.Label>
         <Form.Control
           type="password"
-          placeholder="Enter password"
+          placeholder="Wpisz hasło"
           name="password"
           value={credentials.password}
           onChange={handleInputChange}
@@ -85,10 +82,10 @@ const LoginForm = () => {
       </Form.Group>
 
       <Button variant="primary" type="submit" name="submit">
-      Submit
+      Zaloguj
       </Button>
 
-      <span className="mt-2 d-block">Not registered? <a href="/register">Register here</a></span>
+      <span className="mt-2 d-block">Nie masz konta? <a href="/register">Zarejestruj się!</a></span>
 
       {errorMessage && (
         <div className="alert alert-danger mt-3">{errorMessage}</div>

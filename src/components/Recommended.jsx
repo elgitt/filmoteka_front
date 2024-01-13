@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
 import { Image } from 'react-bootstrap';
-import '../css/RecommendedMovies.css'; // Import stylów CSS
+import '../css/RecommendedMovies.css'; 
 import Sidebar from './Sidebar';
 
 const RecommendedMovies = () => {
